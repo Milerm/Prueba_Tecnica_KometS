@@ -1,9 +1,9 @@
 # Prueba_Tecnica_KometS
 # FlowersAPIRest
-API Rest
+API Rest con Programacion Funcional
 
 ## Descripción
-Se expone un API Rest con sus end-points y se añaden pruebas unitarias usando JUnit
+Se expone un API Rest con sus end-points y utilizando Streams API, ademas se añaden pruebas unitarias usando JUnit
 
 ## Endpoints
 - POST: http://localhost:8080/flowers: Recibe un array de objetos Flower y se almacena en memoria:
@@ -35,7 +35,7 @@ Se expone un API Rest con sus end-points y se añaden pruebas unitarias usando J
   }
   ]
 - GET: http://localhost:8080/flowers: Devuelve la lista de objetos Flower almacenada en memoria, ordenadas descendentemente por el atributo "name" y concatenada la cadena "-kometsales"
-- GET: http://localhost:8080/flowers/price-filter: Devuelve una lista de objetos Flower cuyo precio sea mayor a 20
+- GET: http://localhost:8080/flowers/{price-filter}: Devuelve una lista de objetos Flower cuyo precio sea mayor a 20
 - DELETE: http://localhost:8080/flowers/{id}: Borra un objeto Flower de la lista, cuyo id sea el parámetro {id}
 - GET: http://localhost:8080/flowers/{name}: Devuelve una lista de objetos Flower cuyo nombre coincida con el parámetro {name}
 
