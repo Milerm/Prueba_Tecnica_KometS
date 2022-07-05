@@ -3,11 +3,10 @@ package com.mileidis.flowers.service.impl;
 import com.mileidis.flowers.model.Flower;
 import com.mileidis.flowers.model.FlowerDTO;
 import com.mileidis.flowers.service.FlowerService;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Optional;
 import org.springframework.stereotype.Service;
+import java.util.*;
+
+import java.util.stream.Collectors;
 
 /**
  * @author Mileidis Ruiz
@@ -58,4 +57,16 @@ public class DefaultFlowerService implements FlowerService {
     return flowerDeleted.get();
   }
 
+  @Override
+  public ArrayList<Flower> updateFlowerById(Flower newFlower, String id) {
+    ArrayList<Flower> newFlowerList = (ArrayList<Flower>) DefaultFlowerService.flowerList.stream().map(flower -> {
+      if (flower.getId().equals(id)) {
+        flower.setName(newFlower.getName());
+        flower.setPrice(newFlower.getPrice());
+      }
+      return flower;
+    }).collect(Collectors.toList());
+
+    return newFlowerList;
+  }
 }

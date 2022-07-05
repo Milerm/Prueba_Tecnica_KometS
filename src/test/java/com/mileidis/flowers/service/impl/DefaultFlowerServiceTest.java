@@ -70,4 +70,18 @@ class DefaultFlowerServiceTest {
 
     Assertions.assertEquals(flower.toString(), flowerExpected.toString());
   }
+
+  @Test
+  void updateFlowerById() {
+    Flower newFlower = new Flower("1","nuevonombre",100f);
+    ArrayList<Flower> flowerListExpected = new ArrayList<>();
+    flowerListExpected.add(newFlower);
+    flowerListExpected.add(new Flower("2","girasol",20.5f));
+    flowerListExpected.add(new Flower("3","clavel",25.2f));
+    flowerListExpected.add(new Flower("4","gardenia",30.3f));
+    ArrayList<Flower> flowerListActual = flowerService.updateFlowerById(newFlower, "1");
+
+    Assertions.assertEquals(flowerListActual.toString(), flowerListExpected.toString());
+  }
+
 }

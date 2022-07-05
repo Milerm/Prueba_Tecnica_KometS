@@ -38,5 +38,5 @@ Se expone un API Rest con sus end-points y utilizando Streams API, ademas se añ
 - GET: http://localhost:8080/flowers/{price-filter}: Devuelve una lista de objetos Flower cuyo precio sea mayor a 20
 - DELETE: http://localhost:8080/flowers/{id}: Borra un objeto Flower de la lista, cuyo id sea el parámetro {id}
 - GET: http://localhost:8080/flowers/{name}: Devuelve una lista de objetos Flower cuyo nombre coincida con el parámetro {name}
-
+- UPDATE: http://localhost:8080/flowers/{id}: Actualiza un objeto Flower de la lista, cuyo id sea el parámetro {id}
 

@@ -18,4 +18,6 @@ public interface FlowerService {
   ArrayList<Flower> getFlowersByName(String name);
 
   Flower deleteFlowerById(String id);
+
+  ArrayList<Flower> updateFlowerById(Flower flower,String id);
 }
